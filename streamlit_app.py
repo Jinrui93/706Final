@@ -6,7 +6,7 @@ import datetime
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv('/Users/yujanting/Desktop/spring 2023/BMI 706/bmi706-yujanting/df_state_level.csv')
+    df = pd.read_csv('df_state_level.csv')
     df['date'] = pd.to_datetime(df['date'])
     return df
 
