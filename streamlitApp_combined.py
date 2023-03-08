@@ -273,7 +273,7 @@ sleep = alt.Chart(subset).mark_circle(size=60).encode(
 st.altair_chart(sleep, use_container_width=True)
 
 
-df1 = pd.read_csv('data.csv')
+df1_0 = pd.read_csv('data.csv')
 df1_1 = pd.read_csv('data_month.csv')
 
 default_ym1 = 202003
@@ -300,10 +300,10 @@ scatter1_1 = alt.Chart(df5_1).mark_circle().encode(
     title='Insured Rate and COVID-19 Deaths'
 ).interactive()
 
-col1, col2 = st.columns(2)
-with col1:
+col1_1, col2_1 = st.columns(2)
+with col1_1:
     st.altair_chart(scatter1_0, use_container_width=True)
 
-with col2:
+with col2_1:
     st.altair_chart(scatter1_1, use_container_width=True)
     
