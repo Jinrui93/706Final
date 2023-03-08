@@ -2,7 +2,7 @@
 
 In this project, we are interested in the visualization of COVID-19. We use the dataset "US Counties COVID-19 + Weather + Socio/Health Data” published on Kaggle with comprehensive data on COVID-19 cases and deaths in various counties, as well as information on related weather patterns, social indicators, and health statistics, providing a unique opportunity to understand the impact of different factors on the spread of COVID-19. During the pandemic, counties of the United States span a diverse range of social, economic, health, and weather conditions. Because of the COVID19 pandemic, more than 2000 counties have already experienced some COVID19 cases. The data was collected and aimed to identify which populations are at risk of COVID-19 and help prepare high-risk communities. Each observations included in the dataset was collected on a daily basis in each county. The dataset used in the visualization tasks is the subset of the original large full dataset according to the questions that are trying to answer.
 
-All codes deployed on StreamLit is stored in `streamlitApp_combined.py` for visualization tasks. 
+All codes deployed on StreamLit is stored in `streamlitApp_combined.py` for visualization tasks. \\
 Here is the link guiding to the StreamLit application: https://jinrui93-706final-streamlitapp-combined-dicvxm.streamlit.app/. 
 
 `JZstreamlitCode.py`, `fz.py`, `streamlit_app.py` are three sub-applications of the combined one with the needs to shorter the wait time when changing features of interest in the application if only interested in visualizing some of the tasks. Below are the links for three applications respectively: 
