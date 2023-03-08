@@ -106,7 +106,7 @@ combined_scatter_chart2 = alt.hconcat(scatter3, scatter4, scatter5).properties(
 st.altair_chart(combined_scatter_chart2, use_container_width=True)
 
 
-@st.cache_data
+@st.cache
 def load_data():
     df = pd.read_csv('df_state_level.csv')
     df['date'] = pd.to_datetime(df['date'])
