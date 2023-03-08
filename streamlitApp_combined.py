@@ -272,37 +272,3 @@ sleep = alt.Chart(subset).mark_circle(size=60).encode(
     )
 st.altair_chart(sleep, use_container_width=True)
 
-
-df_8 = pd.read_csv('data.csv')
-df1_8 = pd.read_csv('data_month.csv')
-
-default_ym_8 = 202003
-ym_slider_8 = st.slider('Year_Month', min(df1_8['new_date']), max(df1_8['new_date']), value=default_ym_8)
-
-st.write("## Association between Insurance Rate and Number of Covid Cases")
-
-
-df5_8 = df1_8[df1_8['new_date'] == ym_slider_8]
-
-scatter_8 = alt.Chart(df5_8).mark_circle().encode(
-    x=alt.X('percent_insured:Q', scale=alt.Scale(domain=[75, 100]), title = 'Percent Insured'),
-    y=alt.Y('cases_k:Q', title = 'Number of Cases (thousands)'),
-    tooltip=['state','percent_insured','cases_k']
-).properties(
-    title='Insured Rate and COVID-19 Cases'
-).interactive()
-
-scatter1_8 = alt.Chart(df5_8).mark_circle().encode(
-    x=alt.X('percent_insured:Q', scale=alt.Scale(domain=[75, 100]), title = 'Percent Insured'),
-    y=alt.Y('deaths_k:Q', title = 'Number of Deaths (thousands)'),
-    tooltip=['state','percent_insured','deaths_k']
-).properties(
-    title='Insured Rate and COVID-19 Deaths'
-).interactive()
-
-col1_8, col2_8 = st.columns(2)
-with col1_8:
-    st.altair_chart(scatter_8, use_container_width=True)
-
-with col2_8:
-    st.altair_chart(scatter1_8, use_container_width=True)
